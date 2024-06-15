@@ -46,7 +46,7 @@
 
 .link-topo{
   font-size: 18px;
-  color: var(--texto-cinza);
+  color: var(--text-cinza-escuro);
   text-decoration: none;
 }
  
@@ -103,7 +103,7 @@
 
 .principal-texto h2{
   font-size: 30px;
-  color: var(--texto-cinza);
+  color: var(--text-cinza-escuro);
   margin-bottom: 30px;
 	letter-spacing: 2px;
 	
@@ -111,7 +111,7 @@
 
 .principal-texto p{
 	font-size: 18px;
-	color: var(--texto-cinza);
+	color: var(--text-cinza-escuro);
 	line-height: 32px;
 }
 
@@ -137,7 +137,7 @@
 
 .quartos-pagina-principal a{
 	font-size: 20px;
-	color: var(--texto-cinza);
+	color: var(--text-cinza-escuro);
 	font-weight: 600;
 	text-decoration: none;
 	padding: 20px 0;
@@ -152,6 +152,7 @@
 
 .rota iframe{
 	width: 100%;
+	height: 300px;
 	display: block;
 	margin: 0 auto;
 }
@@ -164,7 +165,7 @@
 
 .sobre-cards-principal{
 	max-width: 1024px;
-	margin: 0 auto;
+	margin: 0 auto 40px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -201,6 +202,50 @@
 .sobre-img img{
 	width: 100%;
 	height: 100%;
+}
+
+.container-rodape{
+  width: 100%;
+  height: auto;
+  padding: 15px 0 10px;
+  background-color: #468F82;
+}
+
+.rodape-contatos{
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #468F82;
+  border-bottom: 1px solid  #378374;
+}
+
+.rodape-contatos p{
+  width: 200px;
+  font-size: 18px;
+  padding: 20px;
+  color: var(--texto-claro);
+  margin-left: -20px;
+}
+
+.rodape-contatos a{
+  color: var(--texto-claro);
+  text-decoration: none;
+}
+
+.rodape-contatos .destaque{
+  font-size: 20PX;
+  font-weight: 700;
+  margin-left: 10PX;
+}
+
+.rodape-detalhes{
+  font-size: 18PX;
+  color: var(--texto-claro);
+  text-align: center;
+  background-color: #468F82;
+  margin-top: 30px;
 }
 
 
