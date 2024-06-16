@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
-}
+  scroll-behavior: smooth;
+} 
+
 :root{
   --texto-cinza:#929a98 ;
   --text-cinza-escuro:#605f61;
