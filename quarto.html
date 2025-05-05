@@ -8,22 +8,20 @@
   </head>
   <body>
     <header class="container-cabecalho">
-      <div class="container-topo-divs">
-        <div class="topo-nome">
-          <p>
-            <a class="link-topo link-destaque" href="index.html"
-              >Pousada <span>Secreta</span></a
-            >
-          </p>
-        </div>
-        <div class="topo-nav">
-          <nav>
-            <p><a class="link-topo" href="index.html#sobre">SOBRE</a></p>
-            <p><a class="link-topo" href="index.html#rota">ROTA</a></p>
-            <p><a class="link-topo" href="quarto.html">QUARTOS</a></p>
-          </nav>
-        </div>
-      </div>
+      <a class="link-topo " href="index.html">
+        Pousada <span>Secreta</span>
+      </a>
+
+      <nav  id="menu" class="topo-navegacao">
+        <button aria-label="Abrir Menu" class="btn-mobile" aria-haspopup="true" aria-controls="lista" aria-expanded="false">Menu
+          <span class="hamburger"></span>
+        </button>
+        <ul id="lista">
+          <li id="lista-item"><a href="index.html#sobre">SOBRE</a></li>
+          <li id="lista-item"><a href="index.html#rota">ROTA</a></li>
+          <li id="lista-item"><a href="quarto.html">QUARTOS</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -188,5 +186,7 @@
         <p>"&copy;" Copyright - PousadaDev</p>
       </div>
     </footer>
+
+    <script src="pousada.js"></script>
   </body>
 </html>
