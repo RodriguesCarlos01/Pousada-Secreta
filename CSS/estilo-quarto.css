@@ -15,9 +15,14 @@
 
 .container-cabecalho{
   width: 100%;
+  height: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: var(--fundo-claro);
+  padding: 10px;
+  z-index: 900;
 }
 
 .link-topo {
@@ -40,10 +45,9 @@
 }
 
 .topo-navegacao{
+  align-items: center;
   width: 40%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
+  padding: 10px;
 }
 
 .topo-navegacao ul{
@@ -57,7 +61,8 @@
 }
 
 .topo-navegacao a{
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: normal;
   color: var(--text-cinza-escuro);
   text-decoration: none;
   padding: 10px;
@@ -68,6 +73,7 @@
   height: 200px;
   background-image: url("../assets/img-fundo.jpg");
   background-size: cover;
+  padding-top: 300px;
 }
 
 .container-conteudo {
@@ -260,7 +266,7 @@
   }
 
   .topo-navegacao{
-    width: 40%;
+    width: 30%;
   }
 
   #lista li{
@@ -328,6 +334,14 @@
 /*Responsividade para celular*/
 
 @media screen and (max-width: 500px) {
+
+  .container-cabecalho{
+    width: 100%;
+  }
+
+  .imagem-de-fundo{
+    display: none;
+  }
   
   .container-informacao ul{
     height: auto;
