@@ -13,50 +13,54 @@
   --rodape: #468f82;
 }
 
-.container-topo {
+.container-cabecalho{
   width: 100%;
-  height: auto;
-  position: fixed;
-  background-color: var(--fundo-claro);
-}
-
-.container-topo-divs {
-  width: 1024px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-}
-
-.topo-nome {
-  width: 300px;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.topo-nav {
-  width: 400px;
-  margin: auto 0;
-  padding: 20px 0;
-}
-
-.topo-nav nav {
-  display: flex;
-  justify-content: space-around;
 }
 
 .link-topo {
-  font-size: 18px;
+  width: 30%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
   color: var(--text-cinza-escuro);
   text-decoration: none;
+  padding: 10px;
+
 }
 
-.link-destaque {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-.link-destaque span {
+.link-topo span {
   color: #4c7df7;
+}
+
+.btn-mobile{
+  display: none;
+}
+
+.topo-navegacao{
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.topo-navegacao ul{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.topo-navegacao li{
+  list-style: none;
+}
+
+.topo-navegacao a{
+  font-size: 1.1rem;
+  color: var(--text-cinza-escuro);
+  text-decoration: none;
+  padding: 10px;
 }
 
 .imagem-de-fundo {
@@ -209,13 +213,6 @@
 
 
 /*Responsividade para notebook*/
-.container-topo-divs{
-  width: 100%;
-}
-
-.topo-nav{
-  width: 100%;
-}
 
 .principal-texto{
   width: 100%;
@@ -235,24 +232,121 @@
 }
 
 .informacao-nav ul{
-  width: 100%;
-  gap: 20px;
+  width: 70%;
+  gap: 40px;
 }
 
 .informacao-nav li{
   padding: 0px;
 }
-/*Responsividade para tablet*/
+
+/*Responsividade para hmburger*/
+@media screen and (max-width: 880px) {
+
+  #menu.active #lista{
+    top: 70px;
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #e7e7e7;
+  }
+
+  #lista-item a{
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(39, 37, 37, 0.15);
+  }
+
+  .topo-navegacao{
+    width: 40%;
+  }
+
+  #lista li{
+    margin: 60px 0;
+  }
+  
+  .topo-navegacao #lista{
+    /* TO DO  trocar para none*/
+    display: none;
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    text-align: center;
+    background-color: #e7e7e7;
+    height: 0px;
+    transition: .6s;
+    z-index: 1000;
+  }
+  
+  .btn-mobile{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+    border: none;
+  }
+  .hamburger{
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  .hamburger::after, .hamburger::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+
+  }
+
+  .topo-navegacao.active .hamburger{
+    border-top-color: transparent;
+  }
+  .topo-navegacao.active .hamburger::after{
+    transform: rotate(135deg);
+    top: -7px;
+  }
+  .topo-navegacao.active .hamburger::before{
+    transform: rotate(-135deg);
+    
+  }
+
+  .container-informacao ul{
+    height: auto;
+  }
+  
+}
 
 /*Responsividade para celular*/
-.container-informacao ul{
-  height: auto;
-}
-.rodape-contatos{
-  flex-direction: column;
-}
 
-.rodape-contatos p{
-  padding: 10px 0px;
-  border-bottom: 2px solid;
+@media screen and (max-width: 500px) {
+  
+  .container-informacao ul{
+    height: auto;
+  }
+  .rodape-contatos{
+    flex-direction: column;
+  }
+  
+  .rodape-contatos p{
+    padding: 10px 0px;
+    border-bottom: 2px solid;
+  }
+
+  .informacao-nav nav{
+    width: 100%;
+    text-align: center;
+  }
+
+  .informacao-nav nav ul{
+    gap: 20px;
+  }
 }
